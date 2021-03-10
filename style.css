@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.search-card {
+    display: flex;
+    justify-content: flex-end;
+    background-color: lightgray;
+}
+
+.search-card div {
+    margin: 10px 10px
+}
+
+.search {
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+
+}
+
+.search input {
+    border: none;
+    outline: none;
+    width: 150px;
+    margin: 5px 0 0 5px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.nav1 ul {
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+}
+
+.nav1 ul li {
+    margin: 0 18px;
+    list-style: none;
+    color: black;
+
+}
+
+.nav1 ul a {
+    text-decoration: none;
+}
+
+/* MAIN */
+.banner {
+    width: 100%;
+    height: 45vh;
+    background: url(banniere.jpg) center center /cover;
+    margin-bottom: 30px;
+}
+
+.intro {
+    margin: 30px 8px;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.intro p {
+    text-align: justify;
+}
+
+/* Cartes */
+.carts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 30px 8px;
+}
+
+.cart {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.233);
+}
+
+.portrait {
+    width: 100%;
+    height: 60vh;
+
+}
+
+.prt1 {
+    background: url(portrait1.jpg) center/cover;
+}
+
+.prt2 {
+    background: url(portrait2.jpg) center/cover;
+
+}
+
+.prt3 {
+    background: url(portrait3.jpg) center/cover;
+}
+
+.prt4 {
+    background: url(portrait4.jpg) center/cover;
+}
+
+.legend {
+    display: flex;
+    height: 15vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 0 15px 5px;
+}
+
+.legend h3 {
+    font-size: 2rem;
+}
+
+.legend p {
+    font-size: 1.25rem;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+
+
+.topfoot {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 15px;
+    padding: 15px 10px;
+    background: lightgray;
+}
+
+.quik-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav2 {
+    margin-top: 30px;
+}
+
+.nav2 ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+.nav2 ul li{
+    list-style: none;
+}
+
+.annonc p {
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.topfoot h3 {
+    font-size: 2rem;
+}
+
+.coming img {
+    margin-top: 30px;
+    width: 98%;
+}
+
+.company {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.company p {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 900px) {
+
+    .coming h3,
+    .annonc h3,
+    .quik-link h3,
+    .legend h3 {
+        font-size: 1.5rem;
+    }
+
+    .intro h2 {
+        font-size: 2.5rem;
+    }
+
+    .portrait {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .big-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav1 ul li {
+        margin: 0 10px;
+    }
+
+    .carts {
+        display: block;
+    }
+
+    .cart {
+        margin: 20px 8px;
+    }
+
+    .legend {
+        margin-bottom: 5px;
+    }
+
+    .legend p {
+        font-size: 1rem;
+    }
+
+    .topfoot {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .topfoot div h3 {
+        text-align: center;
+    }
+    .quik-link{
+        align-items: center;
+    }
+
+    .nav2,
+    .annonc p,
+    .coming img {
+        margin-top: 15px;
+    }
+    .company{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
