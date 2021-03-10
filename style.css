@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 a {
@@ -49,6 +52,11 @@ header {
     display: flex;
     justify-content: space-between;
     margin: 10px;
+}
+
+.big-title h1{
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 3rem;
 }
 
 /* menu burger */
@@ -109,13 +117,24 @@ header {
     background-color: #f1f1f1;
     border-radius: 5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.233);
+    transition:transform 400ms ease-out;
+    cursor: pointer;
+    position: relative;
+
+}
+.cart:hover{
+    transform: scale(1.1);
+    z-index: 2;
 }
 
 .portrait {
     width: 100%;
     height: 60vh;
+    object-fit: cover;
 
 }
+
+
 
 .prt1 {
     background: url(portrait1.jpg) center/cover;
@@ -133,7 +152,45 @@ header {
 .prt4 {
     background: url(portrait4.jpg) center/cover;
 }
+.prtt{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    top:0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prt11:hover{
+    background-color:rgba(100, 97, 97, 0.459);
+}
+.prt22:hover{
+    background-color:rgba(100, 97, 97, 0.459);
+}
+.prt33:hover{
+    background-color:rgba(100, 97, 97, 0.459);
+}
+.prt44:hover{
+    background-color:rgba(100, 97, 97, 0.459);
+}
+.btncart{
+    width: 80px;
+    height: 30px;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 40px;
+    transition:transform 400ms ease-out;
+}
+.btncart:hover{
+    background-color: rgba(255, 255, 255, 0.199);
+    transform: scale(1.25);
 
+}
 .legend {
     display: flex;
     height: 15vh;
@@ -213,8 +270,11 @@ footer {
 /* version petit ecran */
 
 
-@media screen and (max-width: 900px) {
-
+@media screen and (max-width: 1000px) {
+    .big-title h1{
+        font-size: 2.25rem;
+        padding-bottom: 10px;
+    }
     .coming h3,
     .annonc h3,
     .quik-link h3,
@@ -227,6 +287,9 @@ footer {
     }
 
     .portrait {
+        height: 40vh;
+    }
+    .prtt{
         height: 40vh;
     }
 }
@@ -242,7 +305,7 @@ footer {
     }
    
     .big-title h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .nav1 ul{
         flex-direction: column;
