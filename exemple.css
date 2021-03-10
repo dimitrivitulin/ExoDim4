@@ -1,0 +1,27 @@
+.nav1{
+    width: 20vw;
+
+}
+.burger{
+    transform: 2s ease;
+}
+
+.close {
+    position: relative;
+
+
+}
+.nav1 ul{
+    visibility: hidden;
+}
+
+input{
+    visibility: hidden;
+}
+#check:checked ~ .burger{
+    visibility: hidden;
+}
+
+#check:checked ~  #bim{
+    visibility: visible;
+}

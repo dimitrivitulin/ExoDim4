@@ -17,7 +17,6 @@ header {
     height: 150px;
     display: flex;
     flex-direction: column;
-
 }
 
 .search-card {
@@ -52,17 +51,25 @@ header {
     margin: 10px;
 }
 
+/* menu burger */
+ 
+.nav1 input{
+    visibility: hidden;
+}
+
 .nav1 ul {
     display: flex;
     flex-direction: row;
-    font-weight: 500;
+}
+.nav1 label{
+    visibility: hidden;
+
 }
 
 .nav1 ul li {
     margin: 0 18px;
     list-style: none;
     color: black;
-
 }
 
 .nav1 ul a {
@@ -203,6 +210,9 @@ footer {
     margin-left: 5px;
 }
 
+/* version petit ecran */
+
+
 @media screen and (max-width: 900px) {
 
     .coming h3,
@@ -221,21 +231,83 @@ footer {
     }
 }
 
+
+/* Version smartphone */
+
+
 @media screen and (max-width:750px) {
+    header{
+        height: 30vh;
+    }
+   
     .big-title h1 {
         font-size: 1.5rem;
     }
-
-    .nav1 ul li {
-        margin: 0 10px;
+    .nav1 ul{
+        flex-direction: column;
     }
 
+    /* MENU BURGER */
+
+    .burger img{
+        visibility: visible;
+        transform: 2s ease;
+    }
+    
+    .close {
+        position: relative;
+    
+    
+    }
+    .nav1 ul{
+        visibility: hidden;
+    }
+
+    #bim li{
+        line-height: 1.5;
+    }
+
+    #bim .close img{
+        position: relative;
+        right: 60px;
+    }
+    input{
+        visibility: hidden;
+    }
+    #check:checked ~ .burger img{
+        visibility: hidden;
+    }
+    
+    #check:checked ~  #bim{
+        visibility: visible;
+    }
+
+    #check:checked ~ #bim .close img{
+        visibility: visible;
+    }
+
+/* -------------------------------------------- */
+   
+
+.banner{
+        display: none;
+    }
+    .intro{
+        padding-top: 30px;
+    }
+    .intro h2{
+        font-size: 1.75rem;
+    }
     .carts {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .cart {
-        margin: 20px 8px;
+        width: 47%;
+        margin: 20px 0;
     }
 
     .legend {
@@ -246,6 +318,9 @@ footer {
         font-size: 1rem;
     }
 
+          /* FOOTER */
+
+
     .topfoot {
         display: flex;
         flex-direction: column;
@@ -253,10 +328,10 @@ footer {
     }
 
     .topfoot div h3 {
-        text-align: center;
+        text-align:start;
     }
     .quik-link{
-        align-items: center;
+        align-items: flex-start;
     }
 
     .nav2,
