@@ -237,7 +237,8 @@ footer {
 
 @media screen and (max-width:750px) {
     header{
-        height: 30vh;
+        height: 32vh;
+
     }
    
     .big-title h1 {
@@ -268,8 +269,9 @@ footer {
     }
 
     #bim .close img{
-        position: relative;
-        right: 60px;
+        position: absolute;
+        right: -15px;
+        top:-32px
     }
     input{
         visibility: hidden;
@@ -286,6 +288,10 @@ footer {
         visibility: visible;
     }
 
+    #check:checked ~ header{
+        height: 40vh;
+    }
+
 /* -------------------------------------------- */
    
 
@@ -293,7 +299,7 @@ footer {
         display: none;
     }
     .intro{
-        padding-top: 30px;
+    
     }
     .intro h2{
         font-size: 1.75rem;
